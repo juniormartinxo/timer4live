@@ -57,6 +57,7 @@ table {
 
 body{
   font-family: 'Share Tech Mono', monospace;
+  background-color: #000;
 }
 `
 

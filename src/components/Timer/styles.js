@@ -28,9 +28,10 @@ const TimerText = styled.p`
   align-self: auto;
   order: 0;
   font-size: 8rem;
+  text-align: center;
 
   animation-name: animacaoBolada;
-  animation-duration: 5s;
+  animation-duration: 15s;
   animation-timing-function: cubic-bezier();
   animation-delay: 1s;
   animation-iteration-count: infinite;
@@ -39,19 +40,19 @@ const TimerText = styled.p`
 
   @keyframes animacaoBolada {
     0% {
-      color: black;
+      color: #9900cc;
     }
     25% {
-      color: green;
+      color: #cc3300;
     }
     50% {
-      color: blue;
+      color: #009acc;
     }
     75% {
-      color: red;
+      color: #9acc00;
     }
     100% {
-      color: yellow;
+      color: #cc0035;
     }
   }
 `
@@ -63,6 +64,7 @@ const TimerTextComum = styled.p`
   align-self: auto;
   order: 0;
   font-size: 2.5rem;
+  color: #fff;
 `
 
 export { TimerContainer, TimerContainerText, TimerText, TimerTextComum }

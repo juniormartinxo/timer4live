@@ -12,12 +12,12 @@ function App() {
       const newSeconds =
         Number(seconds) - 1 < 0 ? Number(59) : Number(seconds) - 1
 
-      setSeconds(newSeconds)
-
       const newMinute =
-        Number(seconds) === 0 && Number(minutes) > 0
+        Number(seconds) === 59 && Number(minutes) > 0
           ? Number(minutes) - 1
           : Number(minutes)
+
+      setSeconds(newSeconds)
 
       setMinutes(newMinute)
 
