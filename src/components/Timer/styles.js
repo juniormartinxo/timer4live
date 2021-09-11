@@ -27,7 +27,33 @@ const TimerText = styled.p`
   flex-basis: auto;
   align-self: auto;
   order: 0;
-  font-size: 6rem;
+  font-size: 8rem;
+
+  animation-name: animacaoBolada;
+  animation-duration: 5s;
+  animation-timing-function: cubic-bezier();
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-play-state: running;
+
+  @keyframes animacaoBolada {
+    0% {
+      color: black;
+    }
+    25% {
+      color: green;
+    }
+    50% {
+      color: blue;
+    }
+    75% {
+      color: red;
+    }
+    100% {
+      color: yellow;
+    }
+  }
 `
 const TimerTextComum = styled.p`
   display: block;
@@ -36,7 +62,7 @@ const TimerTextComum = styled.p`
   flex-basis: auto;
   align-self: auto;
   order: 0;
-  font-size: 2rem;
+  font-size: 2.5rem;
 `
 
 export { TimerContainer, TimerContainerText, TimerText, TimerTextComum }

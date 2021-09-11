@@ -56,7 +56,7 @@ table {
 }
 
 body{
-  font-family: 'Audiowide', cursive;
+  font-family: 'Share Tech Mono', monospace;
 }
 `
 
