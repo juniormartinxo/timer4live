@@ -1,13 +1,12 @@
 import { createGlobalStyle } from 'styled-components'
 
 // prettier-ignore
-const GlobalStyle = createGlobalStyle`
-font-family: 'Audiowide', cursive;
 
 /* http://meyerweb.com/eric/tools/css/reset/
    v5.0.1 | 20191019
    License: none (public domain)
 */
+const GlobalStyle = createGlobalStyle`
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -54,6 +53,10 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+body{
+  font-family: 'Audiowide', cursive;
 }
 `
 
