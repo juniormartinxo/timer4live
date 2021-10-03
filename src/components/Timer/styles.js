@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 
 const TimerContainer = styled.div`
   display: grid;
@@ -9,6 +9,10 @@ const TimerContainer = styled.div`
   grid-template-areas: 'TimerContainerText';
   height: 100vh;
   width: 100vw;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 `
 
 const TimerContainerText = styled.div`

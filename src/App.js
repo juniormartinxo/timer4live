@@ -3,7 +3,7 @@ import GlobalStyle from './global-styles'
 import { useState, useEffect } from 'react'
 
 function App() {
-  const [timer, setTimer] = useState('10:00')
+  const [timer, setTimer] = useState('33:00')
   const [minutes, setMinutes] = useState(timer.split(':')[0])
   const [seconds, setSeconds] = useState(timer.split(':')[1])
 
@@ -24,7 +24,7 @@ function App() {
       setTimer(
         `${newMinute.toString().padStart(2, '0')}:${seconds
           .toString()
-          .padStart(2, '0')}`
+          .padStart(2, '0')}`,
       )
 
       if (minutes === Number(0) && seconds === Number(0)) {

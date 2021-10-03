@@ -9,8 +9,8 @@ import {
 
 function Timer({ timer }) {
   const [translate, setTranslate] = useState({
-    x: 0,
-    y: 0,
+    x: -667,
+    y: 354,
   })
 
   const handleDragMove = e => {
