@@ -1,4 +1,4 @@
-import Timer from './components/Timer'
+import { Timer } from './components/timer'
 import GlobalStyle from './global-styles'
 import { useState, useEffect } from 'react'
 

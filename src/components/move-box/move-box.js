@@ -51,4 +51,4 @@ MoveBox.defaultProps = {
   onPointerMove: () => {},
 }
 
-export default MoveBox
+export { MoveBox }
