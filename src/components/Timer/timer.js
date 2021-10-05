@@ -7,7 +7,7 @@ import {
   TimerTextComum,
   BoxTransform,
   BoxAdmin,
-} from './styles'
+} from './timer-styles'
 
 function Timer({ timer }) {
   const [translate, setTranslate] = useState({
