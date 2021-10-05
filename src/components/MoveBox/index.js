@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Box from './styles'
+import { Box } from './styles'
 
 function MoveBox(props) {
   const {

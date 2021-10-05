@@ -71,4 +71,26 @@ const TimerTextComum = styled.p`
   color: #fff;
 `
 
-export { TimerContainer, TimerContainerText, TimerText, TimerTextComum }
+const BoxAdmin = styled.div`
+  background-color: bisque;
+  top: -80px;
+  position: absolute;
+  margin: 0 auto;
+  padding: 8px;
+  border-radius: 100%;
+  cursor: pointer;
+`
+
+const BoxTransform = styled.div`
+  display: block;
+  float: left;
+`
+
+export {
+  TimerContainer,
+  TimerContainerText,
+  TimerText,
+  TimerTextComum,
+  BoxTransform,
+  BoxAdmin,
+}

@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 
 const Box = styled.div`
   cursor: grab;
@@ -10,4 +10,4 @@ const Box = styled.div`
     cursor: grabbing;
   }
 `
-export default Box
+export { Box }
