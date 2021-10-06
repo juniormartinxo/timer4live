@@ -47,15 +47,19 @@ function Timer({ timer, setTimer, setMinutes, setSeconds }) {
             setMinutes={setMinutes}
             setSeconds={setSeconds}
           ></AdminBox>
-          <MoveBox onDragMove={handleDragMove}>
+          <MoveBox
+            onDragMove={handleDragMove}
+            style={{
+              transform: `translateX(${translate.x}px) translateY(${translate.y}px)`,
+            }}
+          >
             <BoxTransform
-              style={{
-                transform: `translateX(${translate.x}px) translateY(${translate.y}px)`,
-              }}
               onContextMenu={e => {
                 e.preventDefault()
                 handleMouseHover()
-                console.log('context menu')
+              }}
+              onDragEnd={() => {
+                console.log('saiu')
               }}
             >
               <TimerTextComum>{title}</TimerTextComum>
