@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { MoveBox } from '../move-box'
 import { AdminBox } from '../admin-box'
 import {
@@ -11,13 +11,15 @@ import {
 
 ///import * as Icon from '../../resources/ui/icons'
 
-function Timer({ timer }) {
+function Timer({ timer, setTimer, setMinutes, setSeconds }) {
   const [translate, setTranslate] = useState({
     x: 0,
     y: 0,
   })
 
   const [visibleAdminBox, setVisibleAdminBox] = useState('none')
+
+  const [title, setTitle] = useState('A live vai começar em')
 
   const handleDragMove = e => {
     setTranslate({
@@ -39,6 +41,11 @@ function Timer({ timer }) {
           <AdminBox
             visibleAdminBox={visibleAdminBox}
             setVisibleAdminBox={setVisibleAdminBox}
+            title={title}
+            setTitle={setTitle}
+            setTimer={setTimer}
+            setMinutes={setMinutes}
+            setSeconds={setSeconds}
           ></AdminBox>
           <MoveBox onDragMove={handleDragMove}>
             <BoxTransform
@@ -51,7 +58,7 @@ function Timer({ timer }) {
                 console.log('context menu')
               }}
             >
-              <TimerTextComum>A live vai começar em</TimerTextComum>
+              <TimerTextComum>{title}</TimerTextComum>
               <TimerText>{timer}</TimerText>
             </BoxTransform>
           </MoveBox>

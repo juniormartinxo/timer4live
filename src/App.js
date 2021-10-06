@@ -40,7 +40,12 @@ function App() {
 
   return (
     <>
-      <Timer timer={timer} />
+      <Timer
+        timer={timer}
+        setTimer={setTimer}
+        setMinutes={setMinutes}
+        setSeconds={setSeconds}
+      />
       <GlobalStyle />
     </>
   )
