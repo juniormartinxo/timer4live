@@ -83,7 +83,7 @@ const ButtonBoxAdmin = styled.button`
 
 const BoxTransform = styled.div`
   display: block;
-  border: 5px solid #fff;
+  border: 5px solid transparent;
   padding: 25px;
   cursor: grab;
   position: relative;
