@@ -8,7 +8,7 @@ const TimerContainer = styled.div`
   gap: 0px 0px;
   grid-template-areas: 'TimerContainerText';
   height: 100vh;
-  width: 100vw;
+  max-width: 60%;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -61,7 +61,6 @@ const TimerText = styled.p`
   }
 `
 const TimerTextComum = styled.p`
-  display: block;
   flex-grow: 0;
   flex-shrink: 1;
   flex-basis: auto;
@@ -71,9 +70,10 @@ const TimerTextComum = styled.p`
   color: #fff;
 `
 
-const BoxAdmin = styled.div`
-  background-color: bisque;
-  top: -80px;
+const ButtonBoxAdmin = styled.button`
+  background-color: #9900cc;
+  top: -35px;
+  right: -25px;
   position: absolute;
   margin: 0 auto;
   padding: 8px;
@@ -83,7 +83,14 @@ const BoxAdmin = styled.div`
 
 const BoxTransform = styled.div`
   display: block;
-  float: left;
+  border: 5px solid #fff;
+  padding: 25px;
+  cursor: grab;
+  position: relative;
+
+  &:active {
+    cursor: grabbing;
+  }
 `
 
 export {
@@ -92,5 +99,5 @@ export {
   TimerText,
   TimerTextComum,
   BoxTransform,
-  BoxAdmin,
+  ButtonBoxAdmin,
 }

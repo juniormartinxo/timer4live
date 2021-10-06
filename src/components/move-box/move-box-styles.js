@@ -1,13 +1,8 @@
 import styled from 'styled-components/macro'
 
-const Box = styled.div`
-  cursor: grab;
-  position: absolute;
+const MoveBoxStyled = styled.div`
+  position: relative;
   z-index: 9;
   text-align: center;
-
-  &:active {
-    cursor: grabbing;
-  }
 `
-export { Box }
+export { MoveBoxStyled }

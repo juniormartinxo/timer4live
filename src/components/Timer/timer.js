@@ -1,13 +1,15 @@
 import React, { useState } from 'react'
 import { MoveBox } from '../move-box'
+import { AdminBox } from '../admin-box'
 import {
   TimerContainer,
   TimerContainerText,
   TimerText,
   TimerTextComum,
   BoxTransform,
-  BoxAdmin,
 } from './timer-styles'
+
+///import * as Icon from '../../resources/ui/icons'
 
 function Timer({ timer }) {
   const [translate, setTranslate] = useState({
@@ -15,7 +17,7 @@ function Timer({ timer }) {
     y: 0,
   })
 
-  const [visibleBoxAdmin, setVisibleBoxAdmin] = useState('none')
+  const [visibleAdminBox, setVisibleAdminBox] = useState('none')
 
   const handleDragMove = e => {
     setTranslate({
@@ -24,17 +26,20 @@ function Timer({ timer }) {
     })
   }
 
+  const handleMouseHover = () => {
+    setVisibleAdminBox(() => {
+      return visibleAdminBox === 'none' ? 'block' : 'none'
+    })
+  }
+
   return (
-    <div>
+    <>
       <TimerContainer>
-        <TimerContainerText
-          onClick={() => {
-            setTranslate(prevState => ({
-              x: prevState.x + 1,
-              y: prevState.y + 1,
-            }))
-          }}
-        >
+        <TimerContainerText>
+          <AdminBox
+            visibleAdminBox={visibleAdminBox}
+            setVisibleAdminBox={setVisibleAdminBox}
+          ></AdminBox>
           <MoveBox onDragMove={handleDragMove}>
             <BoxTransform
               style={{
@@ -42,26 +47,17 @@ function Timer({ timer }) {
               }}
               onContextMenu={e => {
                 e.preventDefault()
-                setVisibleBoxAdmin(prevState => {
-                  return prevState === 'none' ? 'block' : 'none'
-                })
+                handleMouseHover()
+                console.log('context menu')
               }}
             >
-              <BoxAdmin
-                style={{ display: `${visibleBoxAdmin}` }}
-                onClick={() => {
-                  setVisibleBoxAdmin('none')
-                }}
-              >
-                X
-              </BoxAdmin>
-              <TimerTextComum>A live iniciará em</TimerTextComum>
+              <TimerTextComum>A live vai começar em</TimerTextComum>
               <TimerText>{timer}</TimerText>
             </BoxTransform>
           </MoveBox>
         </TimerContainerText>
       </TimerContainer>
-    </div>
+    </>
   )
 }
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Box } from './move-box-styles'
+import { MoveBoxStyled } from './move-box-styles'
 
 function MoveBox(props) {
   const {
@@ -33,7 +33,7 @@ function MoveBox(props) {
   }
 
   return (
-    <Box
+    <MoveBoxStyled
       onPointerDown={handlePointerDown}
       onPointerUp={handlePointerUp}
       onPointerMove={handlePointerMove}
@@ -41,7 +41,7 @@ function MoveBox(props) {
       className={className}
     >
       {children}
-    </Box>
+    </MoveBoxStyled>
   )
 }
 
