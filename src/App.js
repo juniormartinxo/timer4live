@@ -3,7 +3,7 @@ import GlobalStyle from './global-styles'
 import { useState, useEffect } from 'react'
 
 function App() {
-  const [timer, setTimer] = useState('33:00')
+  const [timer, setTimer] = useState('10:00')
   const [minutes, setMinutes] = useState(timer.split(':')[0])
   const [seconds, setSeconds] = useState(timer.split(':')[1])
 
@@ -36,11 +36,16 @@ function App() {
     }, 1000)
 
     return () => clearInterval(interval)
-  }, [timer, minutes, seconds])
+  }, [minutes, seconds])
 
   return (
     <>
-      <Timer timer={timer} />
+      <Timer
+        timer={timer}
+        setTimer={setTimer}
+        setMinutes={setMinutes}
+        setSeconds={setSeconds}
+      />
       <GlobalStyle />
     </>
   )
