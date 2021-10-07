@@ -39,6 +39,10 @@ footer, header, hgroup, main, menu, nav, section {
 body {
   line-height: 1;
   overflow: hidden;
+  background-image: url('backgrounds/bg.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 menu, ol, ul {
   list-style: none;
